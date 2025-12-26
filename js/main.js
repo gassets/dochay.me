@@ -4312,7 +4312,7 @@ function chapter_filter() {
                 type: "logout",
                 hash: $(".logout-link").data("hash")
             }).done(function(e) {
-                e = e ? JSON.parse(e) : null;
+                e = e ? JSON.parse(e.replace(/^\uFEFF/, "")) : null;
                 if ("success" == e.status) setTimeout(function() {
                     location.reload()
                 }, 1e3);
@@ -4325,15 +4325,15 @@ function chapter_filter() {
             var e = this.value;
             h ? "hatsan" == e ? $("body").css({
                 "background-color": "#f2f2f2",
-                "background-image": "url('/wp-content/themes/dochay.me/assets/images/bg_op.png')",
+                "background-image": "url('https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.0/assets/images/bg_op.png')",
                 "background-repeat": "repeat"
             }).removeClass("dark-theme") : "sachcu" == e ? $("body").css({
                 "background-color": "#c2b49b",
-                "background-image": "url('/wp-content/themes/dochay.me/assets/images/bg_book_op.png')",
+                "background-image": "url('https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.0/assets/images/bg_book_op.png')",
                 "background-repeat": "repeat"
             }).removeClass("dark-theme") : "#232323" == e ? $("body").css({
                 "background-color": e,
-                "background-image": "url('/wp-content/themes/dochay.me/assets/images/bg_dark.gif')",
+                "background-image": "url('https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.0/assets/images/bg_dark.gif')",
                 "background-repeat": "repeat"
             }).addClass("dark-theme") : $("body").css({
                 "background-color": e,
@@ -4415,7 +4415,7 @@ function chapter_filter() {
         })), null);
     $("#search-input").keyup(function() {
         var e;
-        clearTimeout(m), 0 == (e = $(this).val()).length ? $(".list-search-res").html("").addClass("hide") : 3 <= e.length && ($(".list-search-res").html('<img src="/wp-content/themes/dochay.me/assets/images/loading-search.gif" alt="loading">').removeClass("hide"), m = setTimeout(function() {
+        clearTimeout(m), 0 == (e = $(this).val()).length ? $(".list-search-res").html("").addClass("hide") : 3 <= e.length && ($(".list-search-res").html('<img src="https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.0/assets/images/loading-search.gif" alt="loading">').removeClass("hide"), m = setTimeout(function() {
             quick_search(e)
         }, 500))
     }), $("#search-input").bind("paste", function() {
@@ -4423,7 +4423,7 @@ function chapter_filter() {
         var t = this;
         setTimeout(function() {
             var e = $(t).val();
-            0 == e.length ? $(".list-search-res").html("").addClass("hide") : 3 <= e.length && ($(".list-search-res").html('<img src="/wp-content/themes/dochay.me/assets/images/loading-search.gif" alt="loading">').removeClass("hide"), m = setTimeout(function() {
+            0 == e.length ? $(".list-search-res").html("").addClass("hide") : 3 <= e.length && ($(".list-search-res").html('<img src="https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.0/assets/images/loading-search.gif" alt="loading">').removeClass("hide"), m = setTimeout(function() {
                 quick_search(e)
             }, 500))
         }, 0)
@@ -4470,7 +4470,7 @@ function chapter_filter() {
             page: i,
             totalp: e
         }).done(function(e) {
-            e = e ? JSON.parse(e) : null;
+            e = e ? JSON.parse(e.replace(/^\uFEFF/, "")) : null;
             ListChapProcess(n, d, i, e.page_list, e.chap_list), t.css({
                 cursor: "pointer",
                 "pointer-events": "auto",
@@ -4492,7 +4492,7 @@ function chapter_filter() {
             page: n,
             totalp: e
         }).done(function(e) {
-            e = e ? JSON.parse(e) : null;
+            e = e ? JSON.parse(e.replace(/^\uFEFF/, "")) : null;
             ListChapProcess(t, d, n, e.page_list, e.chap_list), i.css({
                 cursor: "pointer",
                 "pointer-events": "auto",
@@ -4503,7 +4503,7 @@ function chapter_filter() {
         type: "read_history",
         t: (new Date).getTime()
     }).done(function(e) {
-        e = e ? JSON.parse(e) : null;
+        e = e ? JSON.parse(e.replace(/^\uFEFF/, "")) : null;
         e && ($("#history-holder").replaceWith(e.main), $("#history-holder-side").replaceWith(e.side))
     }), $("#hot-select").on("change", function() {
         var e = $(this).find(":selected").val();
@@ -4536,7 +4536,7 @@ function chapter_filter() {
             message: i,
             secure: o
         }).done(function(e) {
-            e = e ? JSON.parse(e) : null;
+            e = e ? JSON.parse(e.replace(/^\uFEFF/, "")) : null;
             FormEnable(".single-page-form"), "success" == e.status ? (FormSuccess("Bạn đã gửi nội dung liên hệ thành công! / Your message was sent successfully!", "contact-container"), $("#contact-form").trigger("reset"), $("#contact-secure").val(e.token)) : FormError("Gửi nội dung liên hệ thất bại, bạn vui lòng thử lại sau hoặc gửi email trực tiếp đến contact@dochay.me / Error, please try again later or send email directly to contact@dochay.me", "contact-container")
         })
     }), $(".pagination-container").on("submit", "#page_jump", function(e) {
@@ -4552,7 +4552,7 @@ function chapter_filter() {
         e.preventDefault(), $(".desc-text").css("height", "auto"), $(".showmore").css("height", 0), $(this).addClass("hide")
     }), $(".rate-holder").raty({
         number: 10,
-        path: "/wp-content/themes/dochay.me/assets/images/raty",
+        path: "https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.0/assets/images/raty",
         noRatedMsg: "Đã đánh giá",
         hints: "Không còn gì để nói...;WTF;Cái gì thế này ?!;Haizz;Tạm;Cũng được;Khá đấy;Được;Hay;Tuyệt đỉnh!".split(";"),
         target: ".rate-text",
@@ -5277,7 +5277,7 @@ function chapter_filter() {
         checkReadingHistory: function() {
             var e = "reading_history_" + this.postId,
                 e = localStorage.getItem(e);
-            e && !(e = JSON.parse(e)).expAwarded && (this.readingTime = e.readTime || 0, this.maxScrollPercent = e.scrollPercent || 0)
+            e && !(e = JSON.parse(e.replace(/^\uFEFF/, ""))).expAwarded && (this.readingTime = e.readTime || 0, this.maxScrollPercent = e.scrollPercent || 0)
         },
         saveReadingProgress: function() {
             var e = "reading_history_" + this.postId,
@@ -5458,7 +5458,8 @@ function chapter_filter() {
                 action: "tw_get_fb_comments",
                 post_id: u.postId,
                 page: n,
-                sort: e
+                sort: e,
+                nonce: wp.fbNonce
             },
             success: function(e) {
                 if (e.success) {
@@ -5546,7 +5547,8 @@ function chapter_filter() {
                         action: "tw_add_fb_comment",
                         content: t,
                         post_id: u.postId,
-                        chap_id: a("#fb-comment").data("chap-id") || 0
+                        chap_id: a("#fb-comment").data("chap-id") || 0,
+                        nonce: wp.fbNonce
                     };
                     let i = e.data("parent-id");
                     i && (t.parent_id = i), a.ajax({
@@ -5586,7 +5588,8 @@ function chapter_filter() {
                     type: "POST",
                     data: {
                         action: "tw_like_fb_comment",
-                        comment_id: e
+                        comment_id: e,
+                        nonce: wp.fbNonce
                     },
                     success: function(e) {
                         var t;
