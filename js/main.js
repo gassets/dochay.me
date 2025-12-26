@@ -4325,15 +4325,15 @@ function chapter_filter() {
             var e = this.value;
             h ? "hatsan" == e ? $("body").css({
                 "background-color": "#f2f2f2",
-                "background-image": "url('https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.0/assets/images/bg_op.png')",
+                "background-image": "url('https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.1/assets/images/bg_op.png')",
                 "background-repeat": "repeat"
             }).removeClass("dark-theme") : "sachcu" == e ? $("body").css({
                 "background-color": "#c2b49b",
-                "background-image": "url('https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.0/assets/images/bg_book_op.png')",
+                "background-image": "url('https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.1/assets/images/bg_book_op.png')",
                 "background-repeat": "repeat"
             }).removeClass("dark-theme") : "#232323" == e ? $("body").css({
                 "background-color": e,
-                "background-image": "url('https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.0/assets/images/bg_dark.gif')",
+                "background-image": "url('https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.1/assets/images/bg_dark.gif')",
                 "background-repeat": "repeat"
             }).addClass("dark-theme") : $("body").css({
                 "background-color": e,
@@ -4415,7 +4415,7 @@ function chapter_filter() {
         })), null);
     $("#search-input").keyup(function() {
         var e;
-        clearTimeout(m), 0 == (e = $(this).val()).length ? $(".list-search-res").html("").addClass("hide") : 3 <= e.length && ($(".list-search-res").html('<img src="https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.0/assets/images/loading-search.gif" alt="loading">').removeClass("hide"), m = setTimeout(function() {
+        clearTimeout(m), 0 == (e = $(this).val()).length ? $(".list-search-res").html("").addClass("hide") : 3 <= e.length && ($(".list-search-res").html('<img src="https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.1/assets/images/loading-search.gif" alt="loading">').removeClass("hide"), m = setTimeout(function() {
             quick_search(e)
         }, 500))
     }), $("#search-input").bind("paste", function() {
@@ -4423,7 +4423,7 @@ function chapter_filter() {
         var t = this;
         setTimeout(function() {
             var e = $(t).val();
-            0 == e.length ? $(".list-search-res").html("").addClass("hide") : 3 <= e.length && ($(".list-search-res").html('<img src="https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.0/assets/images/loading-search.gif" alt="loading">').removeClass("hide"), m = setTimeout(function() {
+            0 == e.length ? $(".list-search-res").html("").addClass("hide") : 3 <= e.length && ($(".list-search-res").html('<img src="https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.1/assets/images/loading-search.gif" alt="loading">').removeClass("hide"), m = setTimeout(function() {
                 quick_search(e)
             }, 500))
         }, 0)
@@ -4552,7 +4552,7 @@ function chapter_filter() {
         e.preventDefault(), $(".desc-text").css("height", "auto"), $(".showmore").css("height", 0), $(this).addClass("hide")
     }), $(".rate-holder").raty({
         number: 10,
-        path: "https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.0/assets/images/raty",
+        path: "https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.1/assets/images/raty",
         noRatedMsg: "Đã đánh giá",
         hints: "Không còn gì để nói...;WTF;Cái gì thế này ?!;Haizz;Tạm;Cũng được;Khá đấy;Được;Hay;Tuyệt đỉnh!".split(";"),
         target: ".rate-text",

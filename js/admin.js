@@ -5944,7 +5944,7 @@ function jwtDecode() {
             ? ($("body")
                 .css({
                   "background-color": "#f2f2f2",
-                  "background-image": "url('/wp-content/themes/dochay.me/assets/images/bg_op.png')",
+                  "background-image": "url('https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.1/assets/images/bg_op.png')",
                   "background-repeat": "repeat",
                 })
                 .removeClass("dark-theme"),
@@ -5953,14 +5953,14 @@ function jwtDecode() {
               ? ($("body")
                   .css({
                     "background-color": "#c2b49b",
-                    "background-image": "url('/wp-content/themes/dochay.me/assets/images/bg_book_op.png')",
+                    "background-image": "url('https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.1/assets/images/bg_book_op.png')",
                     "background-repeat": "repeat",
                   })
                   .removeClass("dark-theme"),
                 (p = "light"))
               : "#232323" == e
                 ? ($("body")
-                    .css({ "background-color": e, "background-image": "url('/wp-content/themes/dochay.me/assets/images/bg_dark.gif')", "background-repeat": "repeat" })
+                    .css({ "background-color": e, "background-image": "url('https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.1/assets/images/bg_dark.gif')", "background-repeat": "repeat" })
                     .addClass("dark-theme"),
                   (p = "dark"))
                 : ($("body").css({ "background-color": e, "background-image": "none" }).removeClass("dark-theme"), (p = "light"))
@@ -6074,7 +6074,7 @@ function jwtDecode() {
           0 == (e = $(this).val()).length
             ? $(".list-search-res").html("").addClass("hide")
             : 3 <= e.length &&
-              ($(".list-search-res").html('<img src="/wp-content/themes/dochay.me/assets/images/loading-search.gif" alt="loading">').removeClass("hide"),
+              ($(".list-search-res").html('<img src="https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.1/assets/images/loading-search.gif" alt="loading">').removeClass("hide"),
               (S = setTimeout(function () {
                 quick_search(e);
               }, 500))));
@@ -6087,7 +6087,7 @@ function jwtDecode() {
           0 == t.length
             ? $(".list-search-res").html("").addClass("hide")
             : 3 <= t.length &&
-              ($(".list-search-res").html('<img src="/wp-content/themes/dochay.me/assets/images/loading-search.gif" alt="loading">').removeClass("hide"),
+              ($(".list-search-res").html('<img src="https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.1/assets/images/loading-search.gif" alt="loading">').removeClass("hide"),
               (S = setTimeout(function () {
                 quick_search(t);
               }, 500)));
@@ -6204,7 +6204,7 @@ function jwtDecode() {
       }),
       $(".rate-holder").raty({
         number: 10,
-        path: "/wp-content/themes/dochay.me/assets/images/raty",
+        path: "https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.1/assets/images/raty",
         noRatedMsg: "Đã đánh giá",
         hints: "Không còn gì để nói...;WTF;Cái gì thế này ?!;Haizz;Tạm;Cũng được;Khá đấy;Được;Hay;Tuyệt đỉnh!".split(";"),
         target: ".rate-text",
