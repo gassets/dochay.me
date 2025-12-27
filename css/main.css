@@ -501,7 +501,7 @@ input[type="search"] {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.1/assets/fonts/glyphicons-halflings-regular.woff2") format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.3/assets/fonts/glyphicons-halflings-regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -509,7 +509,7 @@ input[type="search"] {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.1/assets/fonts/Roboto-Regular.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.3/assets/fonts/Roboto-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -517,7 +517,7 @@ input[type="search"] {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.1/assets/fonts/RobotoCondensed-Regular.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.3/assets/fonts/RobotoCondensed-Regular.woff") format("woff");
 }
 
 @media only screen and (max-width: 920px) {
@@ -8111,7 +8111,7 @@ html {
 }
 
 body {
-  background: url(https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.1/assets/images/bg.jpg) top center repeat-x #f4f4f4;
+  background: url(https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.3/assets/images/bg.jpg) top center repeat-x #f4f4f4;
   color: #4e4e4e;
 }
 
@@ -8272,7 +8272,7 @@ h4 {
   display: block;
   width: 144px;
   height: 36px;
-  background: url(https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.1/assets/images/spriteimg_new_white_op.svg) no-repeat;
+  background: url(https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.3/assets/images/spriteimg_new_white_op.svg) no-repeat;
   text-indent: -9999px;
   white-space: nowrap;
   outline: 0;
@@ -8960,13 +8960,13 @@ h4 {
 }
 
 .chapter hr.chapter-start {
-  background: url(https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.1/assets/images/spriteimg_new_white_op.svg) -200px -27px no-repeat;
+  background: url(https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.3/assets/images/spriteimg_new_white_op.svg) -200px -27px no-repeat;
   width: 59px;
   height: 20px;
 }
 
 .chapter hr.chapter-end {
-  background: url(https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.1/assets/images/spriteimg_new_white_op.svg) 0 -51px no-repeat;
+  background: url(https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.3/assets/images/spriteimg_new_white_op.svg) 0 -51px no-repeat;
   width: 277px;
   height: 35px;
 }
@@ -9319,7 +9319,7 @@ h4 {
   display: block;
   margin: 140px 0 0 -7px;
   z-index: 1;
-  background: url(https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.1/assets/images/full-label.png) no-repeat;
+  background: url(https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.3/assets/images/full-label.png) no-repeat;
 }
 
 .chat-button,
@@ -10882,7 +10882,7 @@ h4 {
 }
 
 .dark-theme {
-  background-image: url(https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.1/assets/images/bg_dark.gif);
+  background-image: url(https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.3/assets/images/bg_dark.gif);
   background-color: #232323;
   background-repeat: repeat;
   color: rgba(255, 255, 255, 0.6);
@@ -11011,7 +11011,7 @@ h4 {
 .dark-theme .pagination > li > span {
   color: #b1b1b1;
   border-color: #435361;
-  background-image: url(https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.1/assets/images/bg_dark.gif);
+  background-image: url(https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.3/assets/images/bg_dark.gif);
   background-color: #232323;
   background-repeat: repeat;
 }
@@ -11061,7 +11061,7 @@ h4 {
   border-right: 0;
   border-left: 0;
   border-color: #435361 !important;
-  background-image: url(https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.1/assets/images/bg_dark.gif);
+  background-image: url(https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.3/assets/images/bg_dark.gif);
   background-color: #232323;
   background-repeat: repeat;
 }
@@ -11272,7 +11272,7 @@ h4 {
     border-right: 0;
     border-left: 0;
     border-color: #435361 !important;
-    background-image: url(https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.1/assets/images/bg_dark.gif);
+    background-image: url(https://cdn.jsdelivr.net/gh/gassets/dochay.me@2.1.3/assets/images/bg_dark.gif);
     background-color: #232323;
     background-repeat: repeat;
   }

@@ -1,4 +1,4 @@
-const CACHE_NAME = "truyen-cache-v2.1.1";
+const CACHE_NAME = "truyen-cache-v2.1.3";
 const CACHE_DURATION = 300 * 1000;
 
 self.addEventListener("install", (event) => {
