@@ -4967,14 +4967,28 @@ function chapter_filter() {
     function i() {
         var t = o("#user-info"),
             n = o("#user-info-mobile");
-        0 === t.length && 0 === n.length || o.ajax({
+        var hasDesktop = t.length > 0,
+            hasMobile = n.length > 0,
+            desktopNeedsLoad = hasDesktop && (t.hasClass("loading-user-info") || t.children().length === 0),
+            mobileNeedsLoad = hasMobile && (n.hasClass("loading-user-info") || n.children().length === 0);
+        if (!desktopNeedsLoad && !mobileNeedsLoad) {
+            r.init();
+            a.init();
+            return;
+        }
+        if (!window.wp || !window.wp.ajaxUrl) {
+            r.init();
+            a.init();
+            return;
+        }
+        o.ajax({
             url: window.wp.ajaxUrl,
             type: "POST",
             data: {
                 action: "get_user_sidebar"
             },
             success: function(e) {
-                e.success && (0 < t.length && (t.html(e.data.html), t.removeClass("loading-user-info")), 0 < n.length && (n.html(e.data.mobile_html), n.removeClass("loading-user-info")), window.wp && (e.data.html.includes("form") || e.data.mobile_html.includes("form")) && o.ajax({
+                e.success && (desktopNeedsLoad && (t.html(e.data.html), t.removeClass("loading-user-info")), mobileNeedsLoad && (n.html(e.data.mobile_html), n.removeClass("loading-user-info")), window.wp && (e.data.html.includes("form") || e.data.mobile_html.includes("form")) && o.ajax({
                     url: window.wp.ajaxUrl,
                     type: "POST",
                     data: {
@@ -4992,7 +5006,8 @@ function chapter_filter() {
             },
             error: function() {
                 var e = '<div class="alert-error">Không thể tải thông tin người dùng</div>';
-                0 < t.length && (t.html(e), t.removeClass("loading-user-info")), 0 < n.length && (n.html(e), n.removeClass("loading-user-info"))
+                desktopNeedsLoad && (t.html(e), t.removeClass("loading-user-info"));
+                mobileNeedsLoad && (n.html(e), n.removeClass("loading-user-info"))
             }
         })
     }
